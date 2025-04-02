@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  ai:
+    mcp:
+      server:
+        name: webflux-mcp-server
+        version: 1.0.0
+        type: ASYNC
+        tool-change-notification: true
+        sse-message-endpoint: /mcp/messages
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
